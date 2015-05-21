@@ -1,8 +1,19 @@
 module.exports = {
-  calculAsync: function(num, callback){
-   return callback(null, num * 10);
+  parseFile: function(callback){
+   setTimeout(function(){
+    callback(null, "-> ParseFile fini");
+   }, (Math.random() * 1000) + 1);
   },
-  calcul: function(num){
-   return num * 10;
-  }
-}
+
+  webServiceExterne: function(callback){
+   setTimeout(function(){
+    callback(null, "-> WebServiceExterne fini");
+   }, (Math.random() * 1000) + 1);
+  },
+
+  maDB: function(callback){
+   setTimeout(function(){
+    callback(null, "-> MaDB fini");
+   }, (Math.random() * 1000) + 1);
+  },
+};
